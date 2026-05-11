@@ -36,7 +36,7 @@
 </nav>
 
 <h1>Nathan Edsey</h1>
-<p class="meta">Rising sophomore · Electrical Engineering · Iowa State University</p>
+<p class="meta">Rising sophomore, Electrical Engineering, Iowa State University</p>
 
 <h2 id="about">About</h2>
 
@@ -44,60 +44,60 @@
 
 <p>A few things I spend most of my time on:</p>
 <ul>
-  <li>Developing <strong>WebSiphon</strong>, a web security scanner I built that crawls a port on the internet in less than an hour.</li>
-  <li>Working towards my Private Pilot License at Hap's Air Service at Ames Municipal (and hopefully Chicago this summer).</li>
-  <li>Making electronic music, climbing, playing in a band, and slowly babying the 2004 Yamaha Zuma I bought this summer.</li>
+  <li>Developing WebSiphon, a web security scanner I built that crawls a port on the internet in less than an hour</li>
+  <li>Working towards my Private Pilot License at Hap's Air Service at Ames Municipal (and hopefully chicago this summer)</li>
+  <li>Making electronic music, Climbing, Playing in a band, and slowly babying the 2004 Yamaha Zuma I bought this summer.</li>
 </ul>
 
-<p>I came to engineering through making things. I love to build and break things, and eventually build things that work. I'm most interested in the layer where electrons stop just existing and become useful, somewhere between silicon and software. (Though I love coding also, even if AI took that joy from me :/)</p>
+<p>I came to engineering through making things. I love to build and break things, and eventually build things that work. I'm most interested in the layer where electrons stop just existing and become useful, somewhere between silicon and software. (though I love coding also, even if AI took that joy from me :/)</p>
 
 <h2 id="projects">Projects</h2>
 
-<h3>Nedsey 4004 | a 4-bit CPU from scratch</h3>
+<h3>Nedsey 4004 | a 4 bit CPU design from scratch</h3>
 
 <!-- replace this placeholder URL with your own image, e.g. src="nedsey4004.png" -->
-<img src="https://picsum.photos/seed/nedsey/640/360" alt="Nedsey 4004 — 4-bit CPU in Logisim">
+<img src="https://picsum.photos/seed/nedsey/640/360" alt="Nedsey 4004">
 
-<p>Modern computers are completely impossible to understand the scale of. The chip in your phone has tens of billions of transistors on a slab of silicon smaller than your thumbnail. You can understand the idea — transistors make a bit one or zero, yadda yadda yadda — but the only way to truly understand how these things work at scale is to actually make one yourself. So that's what I did.</p>
+<p>Modern Computers are completely impossible to understand the scale of. The chip in your phone has tens of billions of transistors on a slab of silicon smaller than your thumbnail. You can understand the idea, Transistors make a bit one or zero, yadda yadda yadda, but the only way to truly understand how these things work at scale is to actually make one yourself. So thats what I did.</p>
 
-<p>The Nedsey 4004 (a nod to the wonderful <a href="https://en.wikipedia.org/wiki/Intel_4004">Intel 4004</a>, the first commercial microprocessor — though not the FIRST, that can possibly be credited to the F-14!) is a 4-bit microprocessor I designed in Logisim, a digital logic simulator. Every component, down to the individual AND, OR, NOT, and other logic gates, was placed completely by hand. Every half adder up to the ALU was made completely by me, using trial and error. I'm pretty proud of it, albeit it's a bad design even by 1970s standards. "4-bit" just means it can do math on numbers from 0 to 15. Not to worry — it CAN do math on bigger numbers by using multiple registers (binary, baby!), of which it has 16. It contains a program counter that keeps track of which instruction is running, and a simple Ripple Carry Arithmetic Logic Unit (ALU) that adds numbers by passing carry bits down the line. It also understands over 20 different instructions, which means you can write programs for it.</p>
+<p>The Nedsey 4004 (nod to the wonderful <a href="https://en.wikipedia.org/wiki/Intel_4004">Intel 4004</a>, the first commercial microprocessor, though not the FIRST, that can possibly be credited to the F-14!) is a 4-bit microprocessor I designed in Logisim, a digital logic simulator. Every component, down to the individual AND, OR, NOT, and other logic gates, was places completely by hand. Every half adder to ALU was made compeltely by me, using trial and error. I'm pretty proud of it, albiet its a bad design even by 1970s standards. "4-bit" just means it can do math on numbers from 0 to 15. Not to worry, it CAN do math on bigger numbers by utilizing multiple registers, (Binary, baby!) of which it has 16. It contains a program counter that keeps track of which instruction is running, and a simple ripple carry Arithmatic Unit (ALU) that adds numbers by passing carry bits down the line. It also understands over 20 different instructions, which means you can create programs for it.</p>
 
-<p>Obviously the goal wasn't to try to compete with the large semiconductor fabs, but it was the best way for me to feel like I understand the internal structure of a microchip. While modern microchips are magnitudes more complicated than this, at the end of the day they're all just using a bunch of logic gates, same as the Nedsey 4004.</p>
+<p>Obviously the goal wasn't to try and compete with the large semiconductor fabs, but it was the best way for me to sort of feel like I understand the internal structure of a microchip. While modern microchips are magnitudes more complicated than this, at the end of the day they're all just using a bunch of logic gates, same as the Nedsey 4004.</p>
 
-<p>Creating the Nedsey 4004 instantly led me to wonder if it would be possible to not just design one but actually build one in real life. Is it a crazy idea? Probably — especially since semiconductor manufacturing isn't exactly something you can do in your garage. Or is it? I decided to start easy. The first step in making any microchip is heating a piece of silicon to grow a layer of SiO<sub>2</sub> (silicon dioxide) on the surface of the wafer. This requires heat upwards of 1200°C, and the tool for the job is a little too expensive for my taste. So I had to make my own.</p>
+<p>The creation of the Nedsey 4004 instantly led me to wonder if it would be possible to not just design, but create in real life. Is it a crazy idea? Probably, especially since semiconductor manufactoruing isn't exactly something you can do in your garage. Or is it?  I decided to start easy. The first step of making any microchip is heating up a piece of silicon to grow a layer of SiO2 (silicon dioxide) on the surface of the wafer. This requires heat upwards of 1200C, and the tool for the job is a little too expensive for my taste. THis required me to make my own.</p>
 
 <h3>Variable Temperature Tube Furnace</h3>
 
 <!-- replace this placeholder URL with your own image, e.g. src="tubefurnace.png" -->
 <img src="https://picsum.photos/seed/furnace/640/360" alt="Variable temperature tube furnace">
 
-<p>A custom furnace built to grow silicon dioxide layers on silicon wafers, getting up to 1200°C. A Raspberry Pi Pico drives the heating elements with PWM, which lets the controller dial in precise heating profiles instead of just on/off. Oxide growth is a foundational step in chip fabrication, so the goal was to have a tool I could actually use for early-stage semiconductor work.</p>
+<p>A custom furnace built to grow silicon dioxide layers on silicon wafers, getting up to 1200C. A Raspberry Pi Pico drives the heating elements with PWM, which lets the controller dial in precise heating profiles instead of just on/off. Oxide growth is a foundational step in chip fabrication, so the goal was to have a tool I could actually use for early-stage semiconductor work.</p>
 
 <h2 id="resume">Resume</h2>
 
-<p class="meta">Park Ridge, IL · edsey@iastate.edu · (224) 420-6376</p>
+<p class="meta">Park Ridge, IL, edsey@iastate.edu, (224) 420-6376</p>
 
 <h3>Education</h3>
-<p><strong>Iowa State University</strong> — Ames, IA<br>
-B.S. Electrical Engineering · Expected 2029</p>
-<p><strong>Maine South High School</strong> — Park Ridge, IL · Graduated June 2025</p>
+<p><strong>Iowa State University</strong>, Ames, IA<br>
+B.S. Electrical Engineering, Expected 2029</p>
+<p><strong>Maine South High School</strong>, Park Ridge, IL, Graduated June 2025</p>
 
 <h3>Experience</h3>
 
-<p><strong>WebSiphon</strong> — Founder · 2024–present</p>
+<p><strong>WebSiphon</strong>, Founder, 2024 to present</p>
 <ul>
   <li>Built a high-throughput web security scanner that crawls a port on the internet in under an hour.</li>
   <li>Designed a custom domain-specific language for detection rules.</li>
   <li>Generates recurring revenue from a self-hosted credits system.</li>
 </ul>
 
-<p><strong>Tech City</strong> — Intern · Park Ridge, IL · Oct 2024 – Feb 2025</p>
+<p><strong>Tech City</strong>, Intern, Park Ridge, IL, Oct 2024 to Feb 2025</p>
 <ul>
-  <li>Repaired diverse technology daily — phones, laptops, PCs, 3D printers.</li>
+  <li>Repaired diverse technology daily, including phones, laptops, PCs, and 3D printers.</li>
   <li>Provided customer service, diagnostics, and technical explanations to clients.</li>
 </ul>
 
-<p><strong>Turnkey (E-Commerce Templates)</strong> — Founder · Remote · Mar 2023 – Aug 2024</p>
+<p><strong>Turnkey (E-Commerce Templates)</strong>, Founder, Remote, Mar 2023 to Aug 2024</p>
 <ul>
   <li>Founded and ran a dropshipping template company selling pre-built Shopify stores.</li>
   <li>Generated $3,000+ in revenue within the first month via TikTok and Google ads.</li>
@@ -105,14 +105,14 @@ B.S. Electrical Engineering · Expected 2029</p>
   <li>Hired and managed two employees covering customer service and development.</li>
 </ul>
 
-<p><strong>Paul Vallas Chicago Mayoral Campaign</strong> — Voter Engagement Coordinator · Chicago, IL · Jan–Apr 2023</p>
+<p><strong>Paul Vallas Chicago Mayoral Campaign</strong>, Voter Engagement Coordinator, Chicago, IL, Jan to Apr 2023</p>
 <ul>
   <li>Built a phone-calling webpage displaying swing voter data; increased pickup rates by 50%+.</li>
   <li>Managed three contracted phone callers and maintained the campaign voter database.</li>
 </ul>
 
-<p><strong>Dave Nayak Illinois State Senate Campaign</strong> — Canvasser · Jan–Mar 2024</p>
-<p><strong>Matt Podgorski Cook County Commissioner Campaign</strong> — Canvasser · Mar–Jun 2022</p>
+<p><strong>Dave Nayak Illinois State Senate Campaign</strong>, Canvasser, Jan to Mar 2024</p>
+<p><strong>Matt Podgorski Cook County Commissioner Campaign</strong>, Canvasser, Mar to Jun 2022</p>
 
 <h3>Skills</h3>
 <p><strong>Hardware:</strong> Microchip design, PCB and electronics prototyping, Raspberry Pi (RP2040), Arduino, ESP32<br>
@@ -121,13 +121,13 @@ B.S. Electrical Engineering · Expected 2029</p>
 <strong>Other:</strong> Campaign strategy, data analysis, social media marketing, leadership</p>
 
 <h3>Leadership & Involvement</h3>
-<p><strong>KURE 88.5 FM</strong> — DJ, ISU campus radio</p>
-<p><strong>Rocketry Club</strong> — PCB design</p>
-<p><strong>Co-Owner, Aerospace Club</strong> — Maine South HS · 2023–24. Organized member events and projects including CNC machining and rocket design.</p>
-<p><strong>Rock climbing</strong> — Indoor competitions and outdoor bouldering · 2019–present</p>
+<p><strong>KURE 88.5 FM</strong>, DJ, ISU campus radio</p>
+<p><strong>Rocketry Club</strong>, PCB design</p>
+<p><strong>Co-Owner, Aerospace Club</strong>, Maine South HS, 2023 to 2024. Organized member events and projects including CNC machining and rocket design.</p>
+<p><strong>Rock climbing</strong>, Indoor competitions and outdoor bouldering, 2019 to present</p>
 
 <hr>
-<p class="footer">© Nathan Edsey · Iowa State University</p>
+<p class="footer">© Nathan Edsey, Iowa State University</p>
 
 </body>
 </html>
